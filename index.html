@@ -10,15 +10,12 @@
       --navy: #17324D;
       --gold: #C8953C;
       --cream: #FAF7F0;
-      --bread: #D8A45F;
       --gray: #5F6670;
       --light: #FFFFFF;
       --line: #E4DED3;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -51,9 +48,7 @@
       letter-spacing: .5px;
     }
 
-    .logo span {
-      color: var(--gold);
-    }
+    .logo span { color: var(--gold); }
 
     .nav a {
       margin-left: 24px;
@@ -64,13 +59,12 @@
     }
 
     .hero {
-      min-height: 78vh;
+      max-width: 1180px;
+      margin: auto;
+      padding: 74px 24px;
       display: grid;
       grid-template-columns: 1.05fr .95fr;
       align-items: center;
-      max-width: 1180px;
-      margin: auto;
-      padding: 70px 24px;
       gap: 48px;
     }
 
@@ -88,10 +82,14 @@
       margin: 16px 0 22px;
     }
 
+    .hero p, .section-subtitle {
+      color: var(--gray);
+      font-size: 18px;
+    }
+
     .hero p {
       font-size: 20px;
-      color: var(--gray);
-      max-width: 610px;
+      max-width: 620px;
     }
 
     .buttons {
@@ -107,11 +105,6 @@
       text-decoration: none;
       font-weight: 800;
       display: inline-block;
-      transition: .2s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
     }
 
     .primary {
@@ -122,31 +115,28 @@
     .secondary {
       border: 2px solid var(--navy);
       color: var(--navy);
-      background: transparent;
     }
 
-    .hero-img img {
+    img {
       width: 100%;
       border-radius: 22px;
-      box-shadow: 0 24px 60px rgba(23,50,77,.20);
       display: block;
+      box-shadow: 0 22px 55px rgba(23,50,77,.16);
     }
 
     section {
       max-width: 1180px;
       margin: auto;
-      padding: 70px 24px;
+      padding: 68px 24px;
     }
 
     .section-title {
-      font-size: 36px;
-      margin-bottom: 12px;
+      font-size: 38px;
+      margin: 0 0 12px;
     }
 
     .section-subtitle {
-      color: var(--gray);
-      font-size: 18px;
-      max-width: 780px;
+      max-width: 800px;
       margin-bottom: 36px;
     }
 
@@ -164,14 +154,8 @@
       box-shadow: 0 10px 30px rgba(23,50,77,.07);
     }
 
-    .card h3 {
-      margin-top: 0;
-      font-size: 22px;
-    }
-
-    .card p {
-      color: var(--gray);
-    }
+    .card h3 { margin-top: 0; font-size: 22px; }
+    .card p { color: var(--gray); }
 
     .split {
       display: grid;
@@ -180,10 +164,17 @@
       align-items: center;
     }
 
-    .split img {
-      width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 18px 45px rgba(23,50,77,.16);
+    .service-band {
+      background: var(--navy);
+      color: var(--light);
+      border-radius: 24px;
+      padding: 42px;
+      text-align: center;
+    }
+
+    .service-band p {
+      color: #D8E0E8;
+      font-size: 20px;
     }
 
     .stats {
@@ -202,55 +193,39 @@
     }
 
     .stat strong {
-      font-size: 28px;
       display: block;
       color: var(--gold);
+      font-size: 28px;
     }
 
     .cta {
       background: var(--navy);
       color: var(--light);
       border-radius: 24px;
-      padding: 50px;
+      padding: 52px;
       text-align: center;
     }
 
-    .cta p {
-      color: #D8E0E8;
-      font-size: 18px;
-    }
+    .cta p { color: #D8E0E8; }
 
     footer {
       background: var(--navy);
       color: var(--light);
-      padding: 34px 24px;
+      padding: 36px 24px;
       text-align: center;
       margin-top: 40px;
     }
 
+    footer p {
+      color: #D8E0E8;
+      margin: 6px 0;
+    }
+
     @media (max-width: 850px) {
-
-      .hero,
-      .split {
-        grid-template-columns: 1fr;
-      }
-
-      .cards,
-      .stats {
-        grid-template-columns: 1fr;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      h1 {
-        font-size: 46px;
-      }
-
-      .hero p {
-        font-size: 18px;
-      }
+      .hero, .split { grid-template-columns: 1fr; }
+      .cards, .stats { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      h1 { font-size: 44px; }
     }
   </style>
 </head>
@@ -260,11 +235,11 @@
 <header>
   <div class="nav">
     <div class="logo">Kurz <span>&</span> Co.</div>
-
     <nav class="nav-links">
       <a href="#products">Products</a>
       <a href="#distribution">Distribution</a>
       <a href="#industries">Industries</a>
+      <a href="#careers">Careers</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -273,197 +248,155 @@
 <main>
 
   <section class="hero">
-
     <div>
       <div class="eyebrow">Texas Bakery Distribution</div>
-
-      <h1>
-        Fresh bread delivery built for food service reliability.
-      </h1>
-
+      <h1>Fresh bread delivery built for food service reliability.</h1>
       <p>
-        Kurz & Co. supports schools, restaurants, healthcare,
-        hospitality, and institutional food service partners
-        with dependable bakery distribution across Texas.
+        Kurz & Co. supports schools, restaurants, healthcare, hospitality,
+        and institutional food service partners with dependable bakery
+        distribution across Texas.
       </p>
-
       <div class="buttons">
-        <a class="btn primary" href="#contact">
-          Request Service
-        </a>
-
-        <a class="btn secondary" href="#distribution">
-          View Distribution
-        </a>
+        <a class="btn primary" href="#contact">Request Service</a>
+        <a class="btn secondary" href="#distribution">View Distribution</a>
       </div>
     </div>
 
-    <div class="hero-img">
-      <img
-        src="hero-bread-truck.png"
-        alt="Kurz bakery delivery truck at a Texas distribution facility"
-      />
-    </div>
-
+    <img src="hero-bread-truck.png" alt="Bakery delivery truck at a Texas distribution facility" />
   </section>
 
-  <section id="products">
-
-    <h2 class="section-title">
-      Foodservice Bakery Products
-    </h2>
-
+  <section>
+    <h2 class="section-title">Why Kurz & Co.</h2>
     <p class="section-subtitle">
-      Practical, high-volume bakery supply for commercial kitchens,
-      institutional cafeterias, and route-based food service operations.
+      Foodservice customers need more than bread. They need consistency,
+      reliable delivery windows, practical ordering, and a supplier that
+      understands institutional volume.
     </p>
 
     <div class="cards">
-
       <div class="card">
-        <h3>Bread</h3>
-        <p>
-          Sandwich breads, sliced loaves, table breads,
-          and institutional bakery products for daily service.
+        <h3>Family-Owned Texas Roots</h3>
+        <p>Regional service with relationship-driven accountability.</p>
+      </div>
+      <div class="card">
+        <h3>Foodservice Focused</h3>
+        <p>Built around schools, restaurants, healthcare, and institutions.</p>
+      </div>
+      <div class="card">
+        <h3>Route Reliability</h3>
+        <p>Warehouse staging and daily route operations designed for dependable delivery.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <div class="split">
+      <div>
+        <h2 class="section-title">Bakery products for commercial kitchens.</h2>
+        <p class="section-subtitle">
+          Practical, high-volume bakery supply for cafeterias, restaurants,
+          healthcare facilities, and regional foodservice operators.
         </p>
       </div>
+      <img src="product-bakery-assortment.png" alt="Foodservice bakery product assortment" />
+    </div>
 
-      <div class="card">
-        <h3>Buns & Rolls</h3>
-        <p>
-          Hamburger buns, hot dog buns, dinner rolls,
-          and foodservice formats for restaurants and cafeterias.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Tortillas & Bakery</h3>
-        <p>
-          Bulk tortillas, breakfast bakery,
-          and related products for Texas foodservice partners.
-        </p>
-      </div>
-
+    <div class="cards" style="margin-top:32px;">
+      <div class="card"><h3>Bread</h3><p>Sandwich breads, sliced loaves, and institutional bakery products.</p></div>
+      <div class="card"><h3>Buns & Rolls</h3><p>Hamburger buns, hot dog buns, dinner rolls, and foodservice formats.</p></div>
+      <div class="card"><h3>Tortillas & Bakery</h3><p>Bulk tortillas, breakfast bakery, and related foodservice products.</p></div>
     </div>
   </section>
 
   <section id="distribution">
-
     <div class="split">
-
       <div>
-
-        <h2 class="section-title">
-          Route-based distribution across Texas.
-        </h2>
-
+        <h2 class="section-title">Route-based distribution across Texas.</h2>
         <p class="section-subtitle">
-          Behind every delivery is a logistics operation:
-          route planning, warehouse staging, fresh product handling,
-          and dependable service windows for institutional customers.
+          Behind every delivery is a logistics operation: route planning,
+          warehouse staging, fresh product handling, and dependable service
+          windows for institutional customers.
         </p>
 
         <div class="stats">
-
-          <div class="stat">
-            <strong>TX</strong>
-            Service Area
-          </div>
-
-          <div class="stat">
-            <strong>Daily</strong>
-            Routes
-          </div>
-
-          <div class="stat">
-            <strong>B2B</strong>
-            Focused
-          </div>
-
-          <div class="stat">
-            <strong>Fresh</strong>
-            Delivery
-          </div>
-
+          <div class="stat"><strong>TX</strong>Service Area</div>
+          <div class="stat"><strong>Daily</strong>Routes</div>
+          <div class="stat"><strong>B2B</strong>Focused</div>
+          <div class="stat"><strong>Fresh</strong>Delivery</div>
         </div>
-
       </div>
 
-      <img
-        src="distribution-warehouse.png"
-        alt="Commercial bakery distribution warehouse with bread racks"
-      />
-
+      <img src="distribution-warehouse.png" alt="Commercial bakery distribution warehouse with bread racks" />
     </div>
+  </section>
 
+  <section>
+    <div class="service-band">
+      <h2>Serving Texas foodservice partners.</h2>
+      <p>Houston • Dallas • San Antonio • East Texas • Regional Routes</p>
+    </div>
   </section>
 
   <section id="industries">
-
-    <h2 class="section-title">
-      Industries Served
-    </h2>
-
+    <h2 class="section-title">Industries Served</h2>
     <p class="section-subtitle">
       Kurz & Co. is positioned for customers who need consistency,
       reliability, and practical foodservice support.
     </p>
 
     <div class="cards">
-
-      <div class="card">
-        <h3>Schools & ISDs</h3>
-        <p>
-          Reliable bakery supply for cafeteria programs,
-          student meals, and scheduled delivery needs.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Restaurants</h3>
-        <p>
-          Fresh bread, buns, rolls, and bakery products
-          for commercial kitchens and local operators.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Healthcare & Institutions</h3>
-        <p>
-          Dependable bakery distribution for high-volume,
-          consistency-driven foodservice operations.
-        </p>
-      </div>
-
+      <div class="card"><h3>Schools & ISDs</h3><p>Reliable bakery supply for cafeteria programs and student meals.</p></div>
+      <div class="card"><h3>Restaurants</h3><p>Fresh bread, buns, rolls, and bakery products for commercial kitchens.</p></div>
+      <div class="card"><h3>Healthcare & Institutions</h3><p>Dependable bakery distribution for high-volume foodservice operations.</p></div>
     </div>
-
   </section>
 
   <section>
+    <div class="split">
+      <img src="about-family-business.png" alt="Family-owned bakery distribution company team" />
+      <div>
+        <h2 class="section-title">Family-owned. Operationally focused.</h2>
+        <p class="section-subtitle">
+          Kurz & Co. represents the kind of regional food infrastructure
+          customers rely on every day: practical, accountable, and built
+          around long-term service relationships.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <div class="cta" id="contact">
+  <section id="careers">
+    <div class="split">
+      <div>
+        <h2 class="section-title">Careers in bakery distribution.</h2>
+        <p class="section-subtitle">
+          Route drivers, warehouse staff, operations teams, and customer
+          support roles help keep Texas foodservice customers supplied.
+        </p>
+        <a class="btn secondary" href="#contact">Ask About Open Positions</a>
+      </div>
+      <img src="careers-route-driver.png" alt="Route driver loading bakery products into a delivery truck" />
+    </div>
+  </section>
 
-      <h2>
-        Let’s talk about your bakery distribution needs.
-      </h2>
-
+  <section id="contact">
+    <div class="cta">
+      <h2>Let’s talk about your bakery distribution needs.</h2>
       <p>
         This demo contact section can later connect to email,
-        CRM intake, or customer service workflows.
+        CRM intake, Formspree, or a customer service workflow.
       </p>
-
-      <a class="btn primary" href="mailto:info@example.com">
-        Contact Kurz & Co.
-      </a>
-
+      <a class="btn primary" href="mailto:info@example.com">Contact Kurz & Co.</a>
     </div>
-
   </section>
 
 </main>
 
 <footer>
-  © 2026 Kurz & Co. | Texas Bakery Distribution
+  <strong>Kurz & Co.</strong>
+  <p>Texas Bakery Distribution</p>
+  <p>4640 Brittmoore Rd • Houston, TX 77041</p>
+  <p>© 2026 Kurz & Co. All rights reserved.</p>
 </footer>
 
 </body>
